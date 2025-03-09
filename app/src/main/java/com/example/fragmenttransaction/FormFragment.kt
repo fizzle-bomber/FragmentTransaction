@@ -47,7 +47,7 @@ class FormFragment : Fragment() {
             R.anim.slide_out_right  // Pop exit animation
         )
                 //.hide(this@FormFragment)
-                .replace(R.id.fragment_container, ListFragment())
+                .replace(R.id.left_container, ListFragment())
                 .addToBackStack(null)
                 .commit()
         }
@@ -55,7 +55,7 @@ class FormFragment : Fragment() {
         view.findViewById<Button>(R.id.submitButton).setOnClickListener {
             // Replace with SuccessFragment
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, SuccessFragment())
+                .replace(R.id.left_container, SuccessFragment())
                 .addToBackStack(null)
                 .commit()
         }

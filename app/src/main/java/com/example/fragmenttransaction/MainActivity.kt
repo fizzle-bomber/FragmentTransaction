@@ -14,9 +14,13 @@ class MainActivity : AppCompatActivity() {
 
         if(savedInstanceState == null){
           supportFragmentManager.beginTransaction()
-              .add(R.id.fragment_container, LoginFragment())
+              .add(R.id.left_container, LoginFragment())
               .commit()
         }
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.right_container, DemoFragment())
+            .commit()
 
     }
 }

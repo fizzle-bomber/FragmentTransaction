@@ -12,6 +12,11 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
+        if(savedInstanceState == null){
+          supportFragmentManager.beginTransaction()
+              .add(R.id.fragment_container, LoginFragment())
+              .commit()
+        }
 
     }
 }

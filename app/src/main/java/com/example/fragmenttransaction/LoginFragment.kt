@@ -24,7 +24,7 @@ class LoginFragment : Fragment() {
         view.findViewById<Button>(R.id.loginButton).setOnClickListener {
             //Replace with Form Fragment
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container,FormFragment())
+                .replace(R.id.left_container,FormFragment())
                 .addToBackStack(null)
                 .commit()
         }
@@ -32,7 +32,7 @@ class LoginFragment : Fragment() {
         view.findViewById<Button>(R.id.registerButton).setOnClickListener {
             // Replace with FormFragment
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, FormFragment())
+                .replace(R.id.left_container, FormFragment())
                 .addToBackStack(null)
                 .commit()
         }

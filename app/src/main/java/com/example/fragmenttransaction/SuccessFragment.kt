@@ -18,7 +18,7 @@ class SuccessFragment : Fragment() {
         view.findViewById<Button>(R.id.backButton).setOnClickListener {
             // Replace with LoginFragment
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, LoginFragment())
+                .replace(R.id.left_container, LoginFragment())
                 .commit()
         }
 

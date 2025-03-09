@@ -1,0 +1,35 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Buttons to demonstrate add(), replace(), and hide() -->
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Fragment" />
+
+    <Button
+        android:id="@+id/replaceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Replace Fragment" />
+
+    <Button
+        android:id="@+id/hideButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hide Fragment" />
+
+    <!-- Container for dynamic fragments -->
+    <FrameLayout
+        android:id="@+id/demo_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/darker_gray" />
+</LinearLayout>

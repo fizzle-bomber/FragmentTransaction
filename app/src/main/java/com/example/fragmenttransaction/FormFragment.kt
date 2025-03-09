@@ -6,10 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.RadioGroup
+import android.widget.Switch
+import android.widget.TextView
 
 class FormFragment : Fragment() {
 
+    private lateinit var inputField: EditText
+    private lateinit var textView: TextView
+    private lateinit var checkBox: CheckBox
+    private lateinit var radioGroup: RadioGroup
+    private lateinit var switchButton: Switch
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -18,7 +27,15 @@ class FormFragment : Fragment() {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_form, container, false)
 
-        val inputField = view.findViewById<EditText>(R.id.inputField)
+        // Bind views
+        inputField = view.findViewById(R.id.inputField)
+        textView = view.findViewById(R.id.textView)
+        checkBox = view.findViewById(R.id.checkBox)
+        radioGroup = view.findViewById(R.id.radioGroup)
+        switchButton = view.findViewById(R.id.switchButton)
+
+        // Set initial text for TextView (to test if it changes)
+        textView.text = "Initial TextView Value"
 
         view.findViewById<Button>(R.id.openListButton).setOnClickListener {
             // Add ListFragment on top
